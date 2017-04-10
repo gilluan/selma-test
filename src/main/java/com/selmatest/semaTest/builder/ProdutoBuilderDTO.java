@@ -4,44 +4,46 @@ import java.math.BigDecimal;
 import java.util.Random;
 
 import com.selmatest.semaTest.domain.Fornecedor;
+import com.selmatest.semaTest.domain.FornecedorDTO;
 import com.selmatest.semaTest.domain.GrupoEnum;
 import com.selmatest.semaTest.domain.Produto;
+import com.selmatest.semaTest.domain.ProdutoDTO;
 
-public class ProdutoBuilder {
+public class ProdutoBuilderDTO {
     
     private Integer id = new Random().nextInt(10);
     private String descricao = "descricao default";
     private BigDecimal preco = BigDecimal.ZERO;
-    private Fornecedor fornecedor = new FornecedorBuilder().build();
+    private FornecedorDTO fornecedor = new FornecedorBuilderDTO().build();
     private GrupoEnum grupo = GrupoEnum.VAREJO;
     
-    public ProdutoBuilder withId(Integer id) {
+    public ProdutoBuilderDTO withId(Integer id) {
         this.id = id;
         return this;
     }
     
-    public ProdutoBuilder withDescricao(String descricao) {
+    public ProdutoBuilderDTO withDescricao(String descricao) {
         this.descricao = descricao;
         return this;
     }
     
-    public ProdutoBuilder withPreco(BigDecimal preco) {
+    public ProdutoBuilderDTO withPreco(BigDecimal preco) {
         this.preco = preco;
         return this;
     }
     
-    public ProdutoBuilder withFornecedor(Fornecedor fornecedor) {
+    public ProdutoBuilderDTO withFornecedor(FornecedorDTO fornecedor) {
         this.fornecedor = fornecedor;
         return this;
     }
     
-    public ProdutoBuilder withGrupo(GrupoEnum grupo) {
+    public ProdutoBuilderDTO withGrupo(GrupoEnum grupo) {
         this.grupo = grupo;
         return this;
     }
 
-    public Produto build() {
-        return new Produto(id, descricao, preco, fornecedor, grupo);
+    public ProdutoDTO build() {
+        return new ProdutoDTO(id, descricao, preco, fornecedor, grupo);
     }
 
 }

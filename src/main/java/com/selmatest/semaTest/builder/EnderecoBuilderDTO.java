@@ -1,8 +1,8 @@
 package com.selmatest.semaTest.builder;
 
-import com.selmatest.semaTest.domain.Endereco;
+import com.selmatest.semaTest.domain.EnderecoDTO;
 
-public class EnderecoBuilder {
+public class EnderecoBuilderDTO {
 
     private String logradouro = "logradouro exemplo";
     private String bairro = "bairro exemplo";
@@ -10,33 +10,33 @@ public class EnderecoBuilder {
     private String numero = "11";
     private String complemento = "complemento exemplo";
 
-    public EnderecoBuilder withLogradouro(String logradouro) {
+    public EnderecoBuilderDTO withLogradouro(String logradouro) {
         this.logradouro = logradouro;
         return this;
     }
 
-    public EnderecoBuilder withBairro(String bairro) {
+    public EnderecoBuilderDTO withBairro(String bairro) {
         this.bairro = bairro;
         return this;
     }
 
-    public EnderecoBuilder withCep(String cep) {
+    public EnderecoBuilderDTO withCep(String cep) {
         this.cep = cep;
         return this;
     }
 
-    public EnderecoBuilder withNumero(String numero) {
+    public EnderecoBuilderDTO withNumero(String numero) {
         this.numero = numero;
         return this;
     }
 
-    public EnderecoBuilder withComplemento(String complemento) {
+    public EnderecoBuilderDTO withComplemento(String complemento) {
         this.complemento = complemento;
         return this;
     }
 
-    public Endereco build() {
-        return new Endereco(logradouro, bairro, cep, numero, complemento);
+    public EnderecoDTO build() {
+        return new EnderecoDTO(logradouro, bairro, cep, numero, complemento);
     }
 
 }

@@ -7,7 +7,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.selmatest.semaTest.converter.TelefoneMapper;
+import com.selmatest.semaTest.builder.TelefoneBuilder;
+import com.selmatest.semaTest.builder.TelefoneBuilderDTO;
 import com.selmatest.semaTest.domain.Telefone;
 import com.selmatest.semaTest.domain.TelefoneDTO;
 import com.selmatest.semaTest.domain.TipoTelefoneEnum;
@@ -22,18 +23,11 @@ public class TelefoneMapperTest {
     public void init() {
          mapper = Selma.builder(TelefoneMapper.class).build();
     }
-    
-    private TelefoneDTO getDTO() {
-        return new TelefoneDTO("61983753630", TipoTelefoneEnum.CELULAR);
-    }
-    
-    private Telefone getEntity() {
-        return new Telefone("88884444", TipoTelefoneEnum.FIXO, "61");
-    }
+
 
     @Test
     public void testToDTO() {
-        Telefone entity = getEntity();
+        Telefone entity = new TelefoneBuilder().build();
         TelefoneDTO dto = mapper.toDTO(entity);
         Assert.assertEquals(entity.getNumero(), dto.getNumero());
         Assert.assertEquals(entity.getTipo(), dto.getTipo());
@@ -42,7 +36,7 @@ public class TelefoneMapperTest {
     
     @Test
     public void testToEntity() {
-        TelefoneDTO dto = getDTO();
+        TelefoneDTO dto = new TelefoneBuilderDTO().build();
         Telefone entity = mapper.toEntity(dto);
         Assert.assertEquals(entity.getNumero(), dto.getNumero());
         Assert.assertEquals(entity.getTipo(), dto.getTipo());

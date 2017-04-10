@@ -6,6 +6,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.selmatest.semaTest.builder.ClienteBuilder;
+import com.selmatest.semaTest.builder.ClienteBuilderDTO;
 import com.selmatest.semaTest.converter.ClienteMapper;
 import com.selmatest.semaTest.domain.Cliente;
 import com.selmatest.semaTest.domain.ClienteDTO;
@@ -25,41 +27,26 @@ public class ClienteTest {
          mapper = Selma.builder(ClienteMapper.class).build();
     }
     
-    private ClienteDTO getDTO() {
-        return new 
-                ClienteDTO("jose", 45, 
-                            Arrays.asList("ze", "xpto"), 
-                            Arrays.asList(new TelefoneDTO("123457898", TipoTelefoneEnum.CELULAR)), 
-                            "alguam observacao relevante");
-    }
-    
-    private Cliente getEntity() {
-        return new Cliente("jose", 45, 
-                            Arrays.asList("ze", "xpto"), 
-                            Arrays.asList(new Telefone("123457898", TipoTelefoneEnum.CELULAR, "98")),
-                            new Endereco("rua a", "centro", "72210048", "123", "proximo a casa ao lado"), 
-                            "uma observacao");
-    }
 
     @Test
     public void testToDTO() {
-        Cliente jose = getEntity();
+        Cliente jose = new ClienteBuilder().build();
         ClienteDTO joseDTO = mapper.toDTO(jose);
         Assert.assertEquals(jose.getNome(), joseDTO.getNome());
         Assert.assertEquals(jose.getIdade(), joseDTO.getIdade());
         Assert.assertEquals(2, joseDTO.getApelidos().size());
-        Assert.assertEquals("ze", joseDTO.getApelidos().get(0));
+        Assert.assertEquals(jose.getApelidos().get(0), joseDTO.getApelidos().get(0));
     }
     
     @Test
     public void testToEntity() {
         
-        ClienteDTO dto = getDTO();
+        ClienteDTO dto = new ClienteBuilderDTO().build();
         Cliente entity = mapper.toEntity(dto);
         Assert.assertEquals(entity.getNome(), dto.getNome());
         Assert.assertEquals(entity.getIdade(), dto.getIdade());
         Assert.assertEquals(2, dto.getApelidos().size());
-        Assert.assertEquals("ze", dto.getApelidos().get(0));
+        Assert.assertEquals(dto.getApelidos().get(0), entity.getApelidos().get(0));
         
     }
 }

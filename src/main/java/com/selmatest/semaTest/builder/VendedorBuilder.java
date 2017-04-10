@@ -1,7 +1,9 @@
 package com.selmatest.semaTest.builder;
 
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 import com.selmatest.semaTest.domain.Endereco;
 import com.selmatest.semaTest.domain.Telefone;
@@ -9,13 +11,13 @@ import com.selmatest.semaTest.domain.Vendedor;
 
 public class VendedorBuilder {
 
-    private String nome;
-    private Integer idade;
-    private List<String> apelidos;
-    private List<Telefone> telefones;
-    private Endereco endereco;
-    private String matricula;
-    private Date nascimento;
+    private String nome = "nome default";
+    private Integer idade = new Random().nextInt(50);
+    private List<String> apelidos = Arrays.asList("apelido 1");
+    private List<Telefone> telefones = Arrays.asList(new TelefoneBuilder().build());
+    private Endereco endereco = new EnderecoBuilder().build();
+    private String matricula = "123abc";
+    private Date nascimento = new Date();
 
     public VendedorBuilder withNome(String nome) {
         this.nome = nome;
