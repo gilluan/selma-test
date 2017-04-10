@@ -1,4 +1,4 @@
-package com.selmatest.semaTest.converters;
+package com.selmatest.semaTest.converter;
 
 
 import com.selmatest.semaTest.domain.Cliente;

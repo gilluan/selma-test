@@ -1,5 +1,8 @@
 package com.selmatest.semaTest.domain;
 
+import lombok.Builder;
+
+@Builder
 public class Carro {
     
     private String marca;

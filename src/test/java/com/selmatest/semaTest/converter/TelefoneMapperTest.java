@@ -1,4 +1,4 @@
-package com.selmatest.semaTest.converters;
+package com.selmatest.semaTest.converter;
 
 import java.util.Arrays;
 import java.util.List;
@@ -7,6 +7,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.selmatest.semaTest.converter.TelefoneMapper;
 import com.selmatest.semaTest.domain.Telefone;
 import com.selmatest.semaTest.domain.TelefoneDTO;
 import com.selmatest.semaTest.domain.TipoTelefoneEnum;

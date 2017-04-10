@@ -1,4 +1,4 @@
-package com.selmatest.semaTest.converters;
+package com.selmatest.semaTest.converter;
 
 import java.util.Arrays;
 
@@ -6,19 +6,15 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.selmatest.semaTest.converter.ClienteMapper;
 import com.selmatest.semaTest.domain.Cliente;
 import com.selmatest.semaTest.domain.ClienteDTO;
 import com.selmatest.semaTest.domain.Endereco;
-import com.selmatest.semaTest.domain.Pessoa;
-import com.selmatest.semaTest.domain.PessoaDTO;
 import com.selmatest.semaTest.domain.Telefone;
 import com.selmatest.semaTest.domain.TelefoneDTO;
 import com.selmatest.semaTest.domain.TipoTelefoneEnum;
 
 import fr.xebia.extras.selma.Selma;
-
-
-
 
 public class ClienteTest {
     

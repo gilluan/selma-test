@@ -1,10 +1,10 @@
-package com.selmatest.semaTest.converters;
+package com.selmatest.semaTest.converter;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.selmatest.semaTest.converters.CarroMapper;
+import com.selmatest.semaTest.converter.CarroMapper;
 import com.selmatest.semaTest.domain.Carro;
 import com.selmatest.semaTest.domain.CarroDTO;
 

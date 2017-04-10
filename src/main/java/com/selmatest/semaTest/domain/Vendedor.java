@@ -1,14 +1,16 @@
 package com.selmatest.semaTest.domain;
 
 import java.util.Date;
+import java.util.List;
 
-public class Vendedor {
+public class Vendedor extends Pessoa {
 
     private String matricula;
     private Date nascimento;
-
-    public Vendedor(String matricula, Date nascimento) {
-        super();
+    
+    public Vendedor(String nome, Integer idade, List<String> apelidos, List<Telefone> telefones, Endereco endereco,
+            String matricula, Date nascimento) {
+        super(nome, idade, apelidos, telefones, endereco);
         this.matricula = matricula;
         this.nascimento = nascimento;
     }
