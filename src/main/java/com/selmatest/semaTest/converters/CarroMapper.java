@@ -16,17 +16,3 @@ import fr.xebia.extras.selma.Mapper;
 public interface CarroMapper extends MapperBase<Carro, CarroDTO> {
         
 }
-
-
-
-/*
- * 
- * 
- * echo "# selma-test" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/gilluan/selma-test.git
-git push -u origin master
- * 
- * */

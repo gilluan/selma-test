@@ -3,14 +3,14 @@ package com.selmatest.semaTest.domain;
 public class Telefone {
 
     private String numero;
-    private TipoTelefone tipo;
+    private TipoTelefoneEnum tipo;
     private String ddd;
 
     public Telefone() {
         super();
     }
 
-    public Telefone(String numero, TipoTelefone tipo, String ddd) {
+    public Telefone(String numero, TipoTelefoneEnum tipo, String ddd) {
         super();
         this.numero = numero;
         this.tipo = tipo;
@@ -33,11 +33,11 @@ public class Telefone {
         this.ddd = ddd;
     }
 
-    public TipoTelefone getTipo() {
+    public TipoTelefoneEnum getTipo() {
         return tipo;
     }
 
-    public void setTipo(TipoTelefone tipo) {
+    public void setTipo(TipoTelefoneEnum tipo) {
         
         this.tipo = tipo;
     }

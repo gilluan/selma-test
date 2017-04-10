@@ -8,6 +8,4 @@ import fr.xebia.extras.selma.Mapper;
 
 @Mapper(withIgnoreMissing = IgnoreMissing.ALL)
 public interface TelefoneMapper extends MapperBase<Telefone, TelefoneDTO> {
-    
-    TelefoneDTO toDTO(Telefone entity);
 }

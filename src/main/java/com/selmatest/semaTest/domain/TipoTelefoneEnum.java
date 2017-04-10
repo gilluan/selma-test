@@ -1,6 +1,6 @@
 package com.selmatest.semaTest.domain;
 
-public enum TipoTelefone {
+public enum TipoTelefoneEnum {
     FIXO, CELULAR, TRABALHO
 }
     

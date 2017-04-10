@@ -9,7 +9,7 @@ import org.junit.Test;
 
 import com.selmatest.semaTest.domain.Telefone;
 import com.selmatest.semaTest.domain.TelefoneDTO;
-import com.selmatest.semaTest.domain.TipoTelefone;
+import com.selmatest.semaTest.domain.TipoTelefoneEnum;
 
 import fr.xebia.extras.selma.Selma;
 
@@ -23,11 +23,11 @@ public class TelefoneMapperTest {
     }
     
     private TelefoneDTO getDTO() {
-        return new TelefoneDTO("61983753630", TipoTelefone.CELULAR);
+        return new TelefoneDTO("61983753630", TipoTelefoneEnum.CELULAR);
     }
     
     private Telefone getEntity() {
-        return new Telefone("88884444", TipoTelefone.FIXO, "61");
+        return new Telefone("88884444", TipoTelefoneEnum.FIXO, "61");
     }
 
     @Test
@@ -51,8 +51,8 @@ public class TelefoneMapperTest {
     public void testListToEntity() {
         
         List<TelefoneDTO> lista = Arrays.asList(
-                new TelefoneDTO("123456789", TipoTelefone.FIXO),
-                new TelefoneDTO("987654321", TipoTelefone.CELULAR));
+                new TelefoneDTO("123456789", TipoTelefoneEnum.FIXO),
+                new TelefoneDTO("987654321", TipoTelefoneEnum.CELULAR));
         
         List<Telefone> listEntity = mapper.toListEntity(lista);
         
