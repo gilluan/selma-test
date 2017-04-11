@@ -1,5 +1,8 @@
 package com.selmatest.semaTest.domain;
 
+import lombok.Builder;
+
+@Builder
 public class Endereco {
 
     private String logradouro;

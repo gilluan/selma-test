@@ -6,15 +6,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.selmatest.semaTest.builder.ClienteBuilder;
-import com.selmatest.semaTest.builder.ClienteBuilderDTO;
-import com.selmatest.semaTest.converter.ClienteMapper;
 import com.selmatest.semaTest.domain.Cliente;
 import com.selmatest.semaTest.domain.ClienteDTO;
-import com.selmatest.semaTest.domain.Endereco;
-import com.selmatest.semaTest.domain.Telefone;
-import com.selmatest.semaTest.domain.TelefoneDTO;
-import com.selmatest.semaTest.domain.TipoTelefoneEnum;
 
 import fr.xebia.extras.selma.Selma;
 
@@ -27,10 +20,27 @@ public class ClienteTest {
          mapper = Selma.builder(ClienteMapper.class).build();
     }
     
+    public Cliente getEntity() {
+        return  Cliente
+                .builder()
+                .nome("teste 1")
+                .idade(12)
+                .apelidos(Arrays.asList("apelido 1", "Apelido 2"))
+                .build();
+    }
+    
+    private ClienteDTO getDTO() {
+        return ClienteDTO
+                .builder()
+                .nome("teste 1")
+                .idade(12)
+                .apelidos(Arrays.asList("apelido 1", "Apelido 2"))
+                .build();
+    }
 
     @Test
     public void testToDTO() {
-        Cliente jose = new ClienteBuilder().build();
+        Cliente jose = getEntity();
         ClienteDTO joseDTO = mapper.toDTO(jose);
         Assert.assertEquals(jose.getNome(), joseDTO.getNome());
         Assert.assertEquals(jose.getIdade(), joseDTO.getIdade());
@@ -41,7 +51,7 @@ public class ClienteTest {
     @Test
     public void testToEntity() {
         
-        ClienteDTO dto = new ClienteBuilderDTO().build();
+        ClienteDTO dto = getDTO();
         Cliente entity = mapper.toEntity(dto);
         Assert.assertEquals(entity.getNome(), dto.getNome());
         Assert.assertEquals(entity.getIdade(), dto.getIdade());

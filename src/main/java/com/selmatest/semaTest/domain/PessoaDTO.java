@@ -2,6 +2,9 @@ package com.selmatest.semaTest.domain;
 
 import java.util.List;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public abstract class PessoaDTO {
 
     private String nome;
@@ -13,26 +16,10 @@ public abstract class PessoaDTO {
         super();
     }
 
-    protected PessoaDTO(String nome, Integer idade, List<String> apelidos, List<TelefoneDTO> telefones) {
-        super();
-        this.nome = nome;
-        this.idade = idade;
-        this.apelidos = apelidos;
-        this.telefones = telefones;
-    }
-    
-    
-
     public String getNome() {
         return nome;
     }
 
-    public PessoaDTO(String nome, Integer idade, List<String> apelidos) {
-    super();
-    this.nome = nome;
-    this.idade = idade;
-    this.apelidos = apelidos;
-}
 
     public void setNome(String nome) {
         this.nome = nome;

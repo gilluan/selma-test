@@ -2,6 +2,12 @@ package com.selmatest.semaTest.domain;
 
 import java.util.List;
 
+import com.selmatest.semaTest.domain.Carro.CarroBuilder;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+
+@AllArgsConstructor
 public abstract class Pessoa {
 
     private String nome;
@@ -12,22 +18,6 @@ public abstract class Pessoa {
 
     protected Pessoa() {
         super();
-    }
-
-    protected Pessoa(String nome, Integer idade, List<String> apelidos, List<Telefone> telefones, Endereco endereco) {
-        super();
-        this.nome = nome;
-        this.idade = idade;
-        this.apelidos = apelidos;
-        this.telefones = telefones;
-        this.endereco = endereco;
-    }
-
-    public Pessoa(String nome, Integer idade, List<String> apelidos) {
-        super();
-        this.nome = nome;
-        this.idade = idade;
-        this.apelidos = apelidos;
     }
 
     public String getNome() {

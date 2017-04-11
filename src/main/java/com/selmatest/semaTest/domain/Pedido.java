@@ -2,6 +2,12 @@ package com.selmatest.semaTest.domain;
 
 import java.util.List;
 
+import com.selmatest.semaTest.domain.Carro.CarroBuilder;
+
+import lombok.Builder;
+
+
+@Builder
 public class Pedido {
 
     private int id;

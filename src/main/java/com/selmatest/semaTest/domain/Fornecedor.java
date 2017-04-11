@@ -1,5 +1,10 @@
 package com.selmatest.semaTest.domain;
 
+import com.selmatest.semaTest.domain.Carro.CarroBuilder;
+
+import lombok.Builder;
+
+@Builder
 public class Fornecedor {
 
     private Integer id;

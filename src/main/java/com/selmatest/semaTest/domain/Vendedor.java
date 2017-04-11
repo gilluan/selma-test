@@ -3,11 +3,15 @@ package com.selmatest.semaTest.domain;
 import java.util.Date;
 import java.util.List;
 
+import lombok.Builder;
+
+
 public class Vendedor extends Pessoa {
 
     private String matricula;
     private Date nascimento;
-    
+
+    @Builder
     public Vendedor(String nome, Integer idade, List<String> apelidos, List<Telefone> telefones, Endereco endereco,
             String matricula, Date nascimento) {
         super(nome, idade, apelidos, telefones, endereco);

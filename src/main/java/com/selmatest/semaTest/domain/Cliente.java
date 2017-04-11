@@ -2,6 +2,8 @@ package com.selmatest.semaTest.domain;
 
 import java.util.List;
 
+import lombok.Builder;
+
 public class Cliente extends Pessoa {
 
     private String observacao;
@@ -10,6 +12,7 @@ public class Cliente extends Pessoa {
         super();
     }
 
+    @Builder
     public Cliente(String nome, Integer idade, List<String> apelidos, List<Telefone> telefones, Endereco endereco,
             String observacao) {
         super(nome, idade, apelidos, telefones, endereco);

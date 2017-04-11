@@ -2,6 +2,10 @@ package com.selmatest.semaTest.domain;
 
 import java.math.BigDecimal;
 
+import lombok.Builder;
+
+
+@Builder
 public class Produto {
 
     private Integer id;
