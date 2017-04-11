@@ -2,10 +2,7 @@ package com.selmatest.semaTest.domain;
 
 import java.util.List;
 
-import com.selmatest.semaTest.domain.Carro.CarroBuilder;
-
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 
 @AllArgsConstructor
 public abstract class Pessoa {
