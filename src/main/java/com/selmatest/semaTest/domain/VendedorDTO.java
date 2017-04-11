@@ -4,15 +4,14 @@ import java.util.Date;
 import java.util.List;
 
 import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
 
 
 
-@Data
 public class VendedorDTO extends PessoaDTO{
 
-    private String matricula;
-    private Date nascimento;
+    @Getter private String matricula;
+    @Getter private Date nascimento;
 
     @Builder
     public VendedorDTO(String nome, Integer idade, List<String> apelidos, List<TelefoneDTO> telefones, String matricula,
@@ -21,5 +20,11 @@ public class VendedorDTO extends PessoaDTO{
         this.matricula = matricula;
         this.nascimento = nascimento;
     }
+
+    public VendedorDTO() {
+        super();
+    }
+
+   
 
 }
