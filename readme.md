@@ -16,7 +16,7 @@ Clonar, mapear e transformar objetos de forma automática como se fosse escritos
 ### Declarando um simples mapeamento
 ```java
 	public class Pessoa {
-		private String nome;
+	    private String nome;
 	    private String sobrenome;
 	    // + Getters and Setters
 	}
@@ -28,8 +28,8 @@ Clonar, mapear e transformar objetos de forma automática como se fosse escritos
 	
 	@Mapper
 	public interface PessoaMapper {
-		Pessoa toEntity(PessoaDTO dto)
-		PessoaDTO toDTO(Pessoa pessoa)
+		Pessoa toEntity(PessoaDTO dto);
+		PessoaDTO toDTO(Pessoa pessoa);
 	}
 
 	PessoaMapper pessoaMapper = Selma.builder(PessoaMapper.class).build();
@@ -44,7 +44,7 @@ Clonar, mapear e transformar objetos de forma automática como se fosse escritos
 	@Mapper
 	public interface PessoaMapper {
 		// somente informando que o retorno é o mesmo que o parâmetro
-		Pessoa clonePessoa(Pessoa in)
+		Pessoa clonePessoa(Pessoa in);
 	}
 
 	Pessoa dto = pessoaMapper.clonePessoa(in);
@@ -68,8 +68,8 @@ Clonar, mapear e transformar objetos de forma automática como se fosse escritos
 	}
 	
 	@Mapper(withCustomFields = {
-        @Field({"modelo", "nomeComercial"})
-    })
+        	@Field({"modelo", "nomeComercial"})
+    	})
 	public abstract class CarroMapper {
 	    // + assinaturas necessárias    
 	}
@@ -194,7 +194,7 @@ Clonar, mapear e transformar objetos de forma automática como se fosse escritos
 	@Mapper(withIgnoreMissing = IgnoreMissing.SOURCE)
 
 	// ignora as propriedades que não existem no objeto de saída
-    @Map(withIgnoreMissing = IgnoreMissing.DESTINATION)
+    	@Map(withIgnoreMissing = IgnoreMissing.DESTINATION)
 ```
 
 ## Código fonte exemplos
