@@ -16,14 +16,14 @@ Clonar, mapear e transformar objetos de forma automática como se fosse escritos
 ### Declarando um simples mapeamento
 ```java
 	public class Pessoa {
-	    private String nome;
-	    private String sobrenome;
-	    // + Getters and Setters
+	    	private String nome;
+	    	private String sobrenome;
+	    	// + Getters and Setters
 	}
 	public class PessoaDTO {
-		private String nome;
-	    private String sobrenome;
-	    // + Getters and Setters
+	    	private String nome;
+	    	private String sobrenome;
+	    	// + Getters and Setters
 	}	
 	
 	@Mapper
