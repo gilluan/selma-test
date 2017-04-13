@@ -9,7 +9,7 @@ Clonar, mapear e transformar objetos de forma automática como se fosse escritos
 * Usa somente anotação para configuração do código
 * Baseado na JSR 269
 * Fácil aprendizado
-* Suporta mapeamentos customizadosa nível de atributos
+* Suporta mapeamentos customizados a nível de atributos
 
 ## Uso
 
