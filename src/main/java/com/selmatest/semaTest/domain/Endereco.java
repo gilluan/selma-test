@@ -1,14 +1,20 @@
 package com.selmatest.semaTest.domain;
 
 import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
 @Builder
 public class Endereco {
-
+	@Getter @Setter
     private String logradouro;
+	@Getter @Setter
     private String bairro;
+	@Getter @Setter
     private String cep;
+	@Getter @Setter
     private String numero;
+	@Getter @Setter
     private String complemento;
 
     public Endereco() {
@@ -21,46 +27,6 @@ public class Endereco {
         this.bairro = bairro;
         this.cep = cep;
         this.numero = numero;
-        this.complemento = complemento;
-    }
-
-    public String getLogradouro() {
-        return logradouro;
-    }
-
-    public void setLogradouro(String logradouro) {
-        this.logradouro = logradouro;
-    }
-
-    public String getBairro() {
-        return bairro;
-    }
-
-    public void setBairro(String bairro) {
-        this.bairro = bairro;
-    }
-
-    public String getCep() {
-        return cep;
-    }
-
-    public void setCep(String cep) {
-        this.cep = cep;
-    }
-
-    public String getNumero() {
-        return numero;
-    }
-
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
-
-    public String getComplemento() {
-        return complemento;
-    }
-
-    public void setComplemento(String complemento) {
         this.complemento = complemento;
     }
 

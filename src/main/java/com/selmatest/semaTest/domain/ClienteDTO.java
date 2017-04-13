@@ -3,10 +3,13 @@ package com.selmatest.semaTest.domain;
 import java.util.List;
 
 import lombok.Builder;
+import lombok.Setter;
+import lombok.Getter;
 
 
 public class ClienteDTO extends PessoaDTO {
-    
+
+	@Getter @Setter
     private String observacao;
     
     public ClienteDTO() {
@@ -17,14 +20,6 @@ public class ClienteDTO extends PessoaDTO {
     public ClienteDTO(String nome, Integer idade, List<String> apelidos, List<TelefoneDTO> telefones,
             String observacao) {
         super(nome, idade, apelidos, telefones);
-        this.observacao = observacao;
-    }
-
-    public String getObservacao() {
-        return observacao;
-    }
-
-    public void setObservacao(String observacao) {
         this.observacao = observacao;
     }
     

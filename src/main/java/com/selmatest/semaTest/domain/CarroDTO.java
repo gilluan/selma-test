@@ -1,12 +1,16 @@
 package com.selmatest.semaTest.domain;
 
 import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
 @Builder
 public class CarroDTO {
 
+	@Getter @Setter
     private String marca;
 
+	@Getter @Setter
     private String modelo;
 
     public CarroDTO() {
@@ -16,22 +20,6 @@ public class CarroDTO {
     public CarroDTO(String marca, String modelo) {
         super();
         this.marca = marca;
-        this.modelo = modelo;
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(String modelo) {
         this.modelo = modelo;
     }
 

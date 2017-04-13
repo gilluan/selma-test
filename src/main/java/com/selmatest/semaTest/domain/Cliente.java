@@ -3,9 +3,12 @@ package com.selmatest.semaTest.domain;
 import java.util.List;
 
 import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
 public class Cliente extends Pessoa {
-
+	
+	@Getter @Setter
     private String observacao;
 
     public Cliente() {
@@ -18,13 +21,5 @@ public class Cliente extends Pessoa {
         super(nome, idade, apelidos, telefones, endereco);
         this.observacao = observacao;
     }
-
-    public String getObservacao() {
-        return observacao;
-    }
-
-    public void setObservacao(String observacao) {
-        this.observacao = observacao;
-    }
-
+    
 }

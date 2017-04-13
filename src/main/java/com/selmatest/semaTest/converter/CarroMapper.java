@@ -13,6 +13,7 @@ import fr.xebia.extras.selma.Mapper;
         },
         withIgnoreFields = "ano"
 )
+
 public abstract class CarroMapper implements MapperBase<Carro, CarroDTO> {
         
 	public abstract CarroDTO toDTO(Carro entity);

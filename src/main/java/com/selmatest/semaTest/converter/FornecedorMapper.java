@@ -7,8 +7,7 @@ import fr.xebia.extras.selma.Field;
 import fr.xebia.extras.selma.Mapper;
 
 @Mapper(
-        
-withCustomFields = {
+	withCustomFields = {
         @Field({"endereco.logradouro", "logradouro"}),
         @Field({"endereco.bairro", "bairro"}),
         @Field({"endereco.cep", "cep"}),

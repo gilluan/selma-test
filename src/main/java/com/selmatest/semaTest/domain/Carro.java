@@ -1,12 +1,16 @@
 package com.selmatest.semaTest.domain;
 
 import lombok.Builder;
+import lombok.Getter;
 
 @Builder
 public class Carro {
-    
+
+	@Getter
     private String marca;
+	@Getter
     private Integer ano;
+	@Getter
     private String nomeComercial;
     
     public Carro() {
@@ -26,37 +30,5 @@ public class Carro {
     	this.marca = marca;
     	this.nomeComercial = nomeComercial;
     }
-
-
-    public String getMarca() {
-        return marca;
-    }
-
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-
-    public Integer getAno() {
-        return ano;
-    }
-
-
-    public void setAno(Integer ano) {
-        this.ano = ano;
-    }
-
-
-    public String getNomeComercial() {
-        return nomeComercial;
-    }
-
-
-    public void setNomeComercial(String nomeComercial) {
-        this.nomeComercial = nomeComercial;
-    }
-
-
     
 }
