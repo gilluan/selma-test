@@ -8,7 +8,7 @@ import lombok.Getter;
 
 
 
-public class VendedorDTO extends PessoaDTO{
+public class VendedorDTO extends PessoaDTO {
 
     @Getter private String matricula;
     @Getter private Date nascimento;

@@ -9,10 +9,15 @@ import fr.xebia.extras.selma.Mapper;
 
 @Mapper(
         withCustomFields = {
-                @Field({"modelo", "nomeComercial"})
+        		@Field({"modelo", "nomeComercial"})
         },
         withIgnoreFields = "ano"
 )
-public interface CarroMapper extends MapperBase<Carro, CarroDTO> {
+public abstract class CarroMapper implements MapperBase<Carro, CarroDTO> {
         
+	public abstract CarroDTO toDTO(Carro entity);
+    
+    public Carro toEntity(CarroDTO dto) {
+    	return new Carro(dto.getMarca(), dto.getModelo());
+    };
 }

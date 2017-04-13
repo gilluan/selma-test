@@ -1,11 +1,18 @@
 package com.selmatest.semaTest.converter;
 
+import java.util.List;
+
 import com.selmatest.semaTest.domain.Telefone;
 import com.selmatest.semaTest.domain.TelefoneDTO;
 
-import fr.xebia.extras.selma.IgnoreMissing;
 import fr.xebia.extras.selma.Mapper;
 
-@Mapper(withIgnoreMissing = IgnoreMissing.ALL)
-public interface TelefoneMapper extends MapperBase<Telefone, TelefoneDTO> {
+@Mapper(withIgnoreFields = "ddd")
+public interface TelefoneMapper {
+
+	Telefone toEntity(TelefoneDTO in);
+	TelefoneDTO toDTO(Telefone in);
+	
+	List<Telefone> toListEntity(List<TelefoneDTO> in);
+	List<TelefoneDTO> toListDTO(List<Telefone> in);
 }

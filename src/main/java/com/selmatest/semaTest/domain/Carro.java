@@ -20,6 +20,12 @@ public class Carro {
         this.ano = ano;
         this.nomeComercial = nomeComercial;
     }
+    
+    public Carro(String marca, String nomeComercial) {
+    	super();
+    	this.marca = marca;
+    	this.nomeComercial = nomeComercial;
+    }
 
 
     public String getMarca() {

@@ -22,10 +22,19 @@ import fr.xebia.extras.selma.Selma;
 public class PedidoTest {
     
     PedidoMapper mapper;
+    FornecedorMapper fornecedorMapper;
+    ClienteMapper clienteMapper;
+    TelefoneMapper telefoneMapper;
     
     @Before
     public void init() {
-         mapper = Selma.builder(PedidoMapper.class).build();
+    	 fornecedorMapper = Selma.builder(FornecedorMapper.class).build();
+    	 clienteMapper = Selma.builder(ClienteMapper.class).build();
+    	 telefoneMapper = Selma.builder(TelefoneMapper.class).build();
+         mapper = Selma
+        		 	.builder(PedidoMapper.class)
+        		 	.withCustom(fornecedorMapper, clienteMapper, telefoneMapper)
+        		 	.build();
     }
     
         
