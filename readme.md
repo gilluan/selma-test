@@ -109,7 +109,7 @@ Clonar, mapear e transformar objetos de forma automática como se fosse escritos
 	    private String cep;
 	    private String numero;
 	    private String complemento;
-    }
+    	}
 
 	
 	public class Fornecedor {
@@ -118,7 +118,7 @@ Clonar, mapear e transformar objetos de forma automática como se fosse escritos
 	    private String cnpj;
 	    private Endereco endereco;
         // + Getters and Setters
-    }
+    	}
 	
 	public class FornecedorDTO {
 	    private Integer id;
@@ -129,7 +129,7 @@ Clonar, mapear e transformar objetos de forma automática como se fosse escritos
 	    private String cep;
 	    private String numero;
         // + Getters and Setters
-    }
+    	}
     
 	@Mapper(withCustomFields = {
 	        @Field({"endereco.logradouro", "logradouro"}),
